@@ -1,0 +1,9 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.neopixel {
+    font-size: 48px;
+    line-height: 0.6em;
+    text-shadow: 0px 0px 5px  black;
+}

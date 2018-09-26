@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev:mock": "SERVER=localhost:3000 BOARD=mock npm start"
+    "start:dev": "SERVER=localhost:3000 BOARD=mock npm start"
   },
   "author": "",
   "license": "ISC",

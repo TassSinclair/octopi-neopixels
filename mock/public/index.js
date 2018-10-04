@@ -1,5 +1,6 @@
 const socket = new WebSocket('ws://localhost:3001');
 const neopixels = document.querySelector('#neopixels');
+const jobActiveCheckbox = document.querySelector('#jobActiveCheckbox');
 const jobProgressSlider = document.querySelector('#jobProgressSlider');
 
 (function initNeopixels() {
@@ -41,3 +42,21 @@ jobProgressSlider.addEventListener('change', (e) => {
         }
     }));
 })
+
+jobActiveCheckbox.addEventListener('change', (e) => {
+    const active = e.target.checked;
+    var xhr = new XMLHttpRequest();
+    if (active) {
+        xhr.open('POST', '/api/job', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            'progress': {
+                'completion': 0
+            }
+        }));
+    } else {
+        xhr.open('POST', '/api/job', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({}));
+    }
+});

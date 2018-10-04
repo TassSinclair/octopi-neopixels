@@ -8,7 +8,12 @@
 <body>
     <form>
         <h1>Printer</h1>
-        Job Status: 0% <input type="range" min="1" max="100" value="50" id="jobProgressSlider"> 100%
+        <div>
+            Printing: <input type="checkbox" id="jobActiveCheckbox" />
+        </div>
+        <div>
+            Job Status: 0% <input type="range" min="1" max="100" value="50" id="jobProgressSlider"> 100%
+        </div>
     </form>
     <h2>NeoPixels</h2>
     <div id="neopixels">

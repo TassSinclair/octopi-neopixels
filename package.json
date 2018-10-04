@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "SERVER=localhost:3000 BOARD=mock npm start"
+    "start:mockAll": "SERVER=localhost:3000 BOARD=mock npm start",
+    "start:mockApi": "SERVER=localhost:3000 npm start",
+    "start:mockBoard": "BOARD=mock npm start"
   },
   "author": "",
   "license": "ISC",
